@@ -33,4 +33,12 @@ public class Place {
         occupant = null;
     }
 
+    public String toString()
+    {
+        String x = "";
+        x+=this.xLoc;
+        x+=this.yLoc;
+        return x;
+    }
+
 }

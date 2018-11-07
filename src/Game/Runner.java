@@ -16,9 +16,6 @@ public class Runner {
     {
         Place[][] floor = new Place[10][10];
 
-        Board map = new Board(10,10);
-
-
         //Fill the floor with normal Places
         for (int x = 0; x<floor.length; x++)
         {
@@ -28,7 +25,7 @@ public class Runner {
             }
         }
 
-        System.out.println(map);
+        Board map = new Board(floor);
 
         //Create a random winning Place.
         int x = (int)(Math.random()*floor.length);
@@ -39,6 +36,11 @@ public class Runner {
         int a = (int)(Math.random()*floor.length);
         int b = (int)(Math.random()*floor.length);
         floor[a][b] = new TeleportPlace(a, b);
+
+
+
+        System.out.println(map);
+        //System.out.println(floor);
 
         //Setup player 1 and the input scanner
         Person player1 = new Person("FirstName", "FamilyName", 0,0);
