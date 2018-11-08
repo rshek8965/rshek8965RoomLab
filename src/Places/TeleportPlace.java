@@ -3,7 +3,8 @@ package Places;
 import Game.Runner;
 import People.Person;
 
-public class TeleportPlace extends Place {
+public class TeleportPlace extends Place
+{
 
     public TeleportPlace(int a, int b) {
         super(a, b);
@@ -21,6 +22,7 @@ public class TeleportPlace extends Place {
         occupant = x;
         x.setxLoc((int) (Math.random() * 5));
         x.setyLoc((int) (Math.random() * 5));
-        System.out.println("You entered a teleportation Place. Your new coordinates are: row = " + x.getxLoc() + " col = " + x.getyLoc());
+        System.out.println("you swear you saw something move in the corner of your eye and you try to go look for it");
+        System.out.println("your coordinates: row = " + x.getxLoc() + " col = " + x.getyLoc());
     }
 }

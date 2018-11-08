@@ -21,7 +21,7 @@ public class WinningPlace extends Place
         occupant = x;
         x.setxLoc(this.xLoc);
         x.setyLoc(this.yLoc);
-        System.out.println("You found the winning Place! Ten points for Gryffindor.");
+        System.out.println("you found a hermit crab! it pinched you... isn't life a treasure?");
         Runner.gameOff();
     }
 

@@ -14,6 +14,8 @@ public class Runner {
 
     public static void main(String[] args)
     {
+        System.out.println("you find yourself alone on the beach. maybe you'll find some treasure?");
+        System.out.println("hint: type map to check your location.");
         Place[][] floor = new Place[10][10];
 
         //Fill the floor with normal Places
@@ -37,9 +39,7 @@ public class Runner {
         int b = (int)(Math.random()*floor.length);
         floor[a][b] = new TeleportPlace(a, b);
 
-
-
-        System.out.println(map);
+        //System.out.println(map);
         //System.out.println(floor);
 
         //Setup player 1 and the input scanner
@@ -58,6 +58,15 @@ public class Runner {
             else {
                 System.out.println("Please choose a valid move.");
             }
+            if (move.equals("map"))
+            {
+                System.out.println(map);
+            }
+            if (move.equals("look"))
+            {
+                System.out.println("there is nothing at your feet but more sand");
+            }
+
 
 
         }

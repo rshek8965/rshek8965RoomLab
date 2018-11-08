@@ -18,7 +18,7 @@ public class Place {
      */
     public void enterPlace(Person x)
     {
-        System.out.println("You enter a plain old Place");
+        System.out.println("you don't see anything interesting");
         occupant = x;
         x.setxLoc(this.xLoc);
         x.setyLoc(this.yLoc);
@@ -36,9 +36,16 @@ public class Place {
     public String toString()
     {
         String x = "";
-        x+=this.xLoc;
-        x+=this.yLoc;
-        return x;
+        if (occupant != null) {
+            x += "X ";
+            return x;
+        }
+        else {
+            //x += this.xLoc;
+            //x += this.yLoc + " ";
+            x += " O ";
+            return x;
+        }
     }
 
 }
