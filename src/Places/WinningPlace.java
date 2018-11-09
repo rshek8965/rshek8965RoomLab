@@ -12,7 +12,6 @@ public class WinningPlace extends Place
 
     public WinningPlace(int x, int y) {
         super(x, y);
-
     }
 
     /**
@@ -27,8 +26,7 @@ public class WinningPlace extends Place
         x.setyLoc(this.yLoc);
         int random = (int) (Math.random()*3);
         System.out.println("you found " + aList[random]);
-//        counter+=1;
-//
+
 //        if (counter=3) {
 //            Runner.gameOff();
 //        }

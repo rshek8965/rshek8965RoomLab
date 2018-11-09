@@ -66,7 +66,10 @@ public class Runner {
             }
             if (move.equals("look"))
             {
-               System.out.println("there is nothing at your feet but more sand.");
+                String aList[] = {"there is nothing at your feet but more sand.",
+                        "you're still the only person on the beach...",};
+                int random = (int) (Math.random()*2);
+               System.out.println(aList[random]);
             }
         }
         in.close();

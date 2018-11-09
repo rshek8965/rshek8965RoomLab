@@ -23,8 +23,6 @@ public class Place {
                 "should you be worried that you're the only one on the beach on such a nice day?"};
 
         int random = (int) (Math.random()*3);
-
-
         System.out.println("you don't see anything interesting. " + aList[random]);
         occupant = x;
         x.setxLoc(this.xLoc);
