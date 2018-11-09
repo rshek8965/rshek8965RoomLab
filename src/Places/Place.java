@@ -18,7 +18,14 @@ public class Place {
      */
     public void enterPlace(Person x)
     {
-        System.out.println("you don't see anything interesting");
+        String aList[] = {"the crashing of waves distracts you for a moment...",
+                "the sky is sunny and clear, i hope you don't burn",
+                "should you be worried that you're the only one on the beach on such a nice day?"};
+
+        int random = (int) (Math.random()*3);
+
+
+        System.out.println("you don't see anything interesting. " + aList[random]);
         occupant = x;
         x.setxLoc(this.xLoc);
         x.setyLoc(this.yLoc);

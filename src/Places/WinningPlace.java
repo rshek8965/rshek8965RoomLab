@@ -5,6 +5,10 @@ import People.Person;
 
 public class WinningPlace extends Place
 {
+    private String aList[] = {"some colorful sea glass! but do you really want to carry around garbage?",
+            "a fully intact seashell! it's a really ugly color though...",
+            "a hermit crab! it pinched you... isn't life a treasure?"};
+//    private int counter=0;
 
     public WinningPlace(int x, int y) {
         super(x, y);
@@ -21,8 +25,13 @@ public class WinningPlace extends Place
         occupant = x;
         x.setxLoc(this.xLoc);
         x.setyLoc(this.yLoc);
-        System.out.println("you found a hermit crab! it pinched you... isn't life a treasure?");
-        Runner.gameOff();
+        int random = (int) (Math.random()*3);
+        System.out.println("you found " + aList[random]);
+//        counter+=1;
+//
+//        if (counter=3) {
+//            Runner.gameOff();
+//        }
     }
 
 }

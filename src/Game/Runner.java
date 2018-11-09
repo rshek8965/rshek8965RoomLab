@@ -9,14 +9,13 @@ import java.util.Scanner;
 
 public class Runner {
 
-
     private static boolean gameOn = true;
 
     public static void main(String[] args)
     {
         System.out.println("you find yourself alone on the beach. maybe you'll find some treasure?");
         System.out.println("hint: type map to check your location.");
-        Place[][] floor = new Place[10][10];
+        Place[][] floor = new Place[6][6];
 
         //Fill the floor with normal Places
         for (int x = 0; x<floor.length; x++)
@@ -29,10 +28,13 @@ public class Runner {
 
         Board map = new Board(floor);
 
-        //Create a random winning Place.
-        int x = (int)(Math.random()*floor.length);
-        int y = (int)(Math.random()*floor.length);
-        floor[x][y] = new WinningPlace(x, y);
+        for (int i=0; i<3; i++)
+        {
+            //Create a random winning Place.
+            int x = (int) (Math.random() * floor.length);
+            int y = (int) (Math.random() * floor.length);
+            floor[x][y] = new WinningPlace(x, y);
+        }
 
         //Create a random teleport Place.
         int a = (int)(Math.random()*floor.length);
@@ -64,11 +66,8 @@ public class Runner {
             }
             if (move.equals("look"))
             {
-                System.out.println("there is nothing at your feet but more sand");
+               System.out.println("there is nothing at your feet but more sand.");
             }
-
-
-
         }
         in.close();
     }
