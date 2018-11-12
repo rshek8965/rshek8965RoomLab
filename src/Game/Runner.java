@@ -28,7 +28,7 @@ public class Runner {
 
         Board map = new Board(floor);
 
-        for (int i=0; i<3; i++)
+        for (int i=0; i<4; i++)
         {
             //Create a random winning Place.
             int x = (int) (Math.random() * floor.length);
